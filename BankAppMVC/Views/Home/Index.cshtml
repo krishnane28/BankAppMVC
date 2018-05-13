@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+<h2 style="align-content:center">Home Page</h2>
+<table border="0" style="align-content:center; width:100%">
+    <tr>
+        <td>
+            MyBank MVC Application Home Page
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="1">             
+                <tr>
+                    <td>@Html.ActionLink("News", "News", "Home")</td>
+                </tr>                
+                <tr>
+                    <td>@Html.ActionLink("Transfer ChkToSav", "XferChkToSav", "XferChkToSav")</td>
+                </tr>
+                <tr>
+                    <td>@Html.ActionLink("Transaction History", "TransferHistory", "TransferHistory")</td>
+                </tr>
+                <tr>
+                        <td>@Html.ActionLink("Logout", "Logout", "Home")</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+

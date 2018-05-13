@@ -1,0 +1,30 @@
+﻿@model BankAppMVC.Models.XferChkToSavModel
+
+@{
+    ViewBag.Title = "Transfer Checking to Savings";
+}
+
+<h2>Transfer Checking to Savings</h2>
+<h2>Checking account number : @ViewBag.CheckingAccountNumber</h2>
+
+@using (Html.BeginForm())
+{
+    <table border="0">
+        <tr>
+            <td><label>Checking Balance : @Model.ChkAccountBalance</label></td>
+        </tr>
+        <tr>
+            <td><label>Savings Balance : @Model.SavAccountBalance</label></td>
+        </tr>
+        <tr>
+            <td>@Html.TextBoxFor(m => m.Amount)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Transfer" name="xferLogin" id="xferLogin" /></td>
+        </tr>
+        <tr>
+            <td><label>@ViewBag.Message</label></td>
+        </tr>
+    </table>
+}
+

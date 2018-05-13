@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BankAppMVC.Models.TransferHistoryModel>
+
+@{
+    ViewBag.Title = "Transfer History";
+}
+
+<h2>Transfer History</h2>
+<label>Checking Account Number : @ViewBag.CheckingAccountNumber</label>
+<table border="1">
+    <tr>
+        <th>From Account Number</th>
+        <th>To Account Number</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Checking Account Number</th>
+    </tr>
+    @foreach(var items in Model)
+    {
+        <tr>
+            <td>@items.FromAccountNum</td>
+            <td>@items.ToAccountNum</td>
+            <td>@items.Date</td>
+            <td>@items.Amount</td>
+            <td>@items.CheckingAccountNumber</td>
+        </tr>
+    }
+</table>
+

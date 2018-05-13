@@ -1,0 +1,30 @@
+﻿@model BankAppMVC.Models.LoginModel
+
+@{
+    @ViewBag.Title;
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.Username)</td>
+            <td>@Html.TextBoxFor(m => m.Username)</td>
+            <td>@Html.ValidationMessageFor(m => m.Username)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.Password)</td>
+            <td>@Html.PasswordFor(m => m.Password)</td>
+            <td>@Html.ValidationMessageFor(m => m.Password)</td>
+        </tr>
+        <tr>            
+            <td><input type="submit" value="Login" name="btnLogin" id="btnLogin" /></td>
+            <td><label>@ViewBag.Message</label></td>
+        </tr>
+    </table>
+
+}
+
+
